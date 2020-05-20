@@ -8,7 +8,14 @@ const { renderAddLink, addLink, renderLinks, deleteLink, editLink, renderEditLin
 // Authorization
 router.use(isLoggedIn);
 
+
 // Routes
+router.get('/listar', async(req, res) => {
+    const estudiante = await pool.query('SELECT * FROM anime');
+    res.render('links/accion', { links });
+
+});
+
 router.get('/add', renderAddLink);
 router.post('/add', addLink);
 router.get('/', isLoggedIn, renderLinks);

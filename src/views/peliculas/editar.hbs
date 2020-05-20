@@ -1,0 +1,20 @@
+<center><h1>yo soy editar</h1></center>
+<br>
+{{#each estudianteid}}
+<form action="/estudiante/editar/{{id}}" method="post">        
+                        <div class="form-group">
+                            <input class="form-control" type="text" value="{{nombre}}" name="nombre"  id="">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="number" value="{{edad}}" name="edad" id="">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="text" value="{{correo}}" name="correo"  id="">
+                        </div>
+                      
+                        <div class="form-gropu">
+                            <button type="submit"  class="btn btn-success btn-block">enviar</button>
+                        </div>
+                        
+</form>
+{{/each}}

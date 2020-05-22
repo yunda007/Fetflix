@@ -1,32 +1,75 @@
-<div class="container1">
-  <div class="container">
-  <div class="row">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Fetflix</title>
+</head>
+<body>
 
-    <div class="col-md-4 mx-auto">
-      <div class="card text-center">
-        <div class="card-header">
-          <h3>Login</h3>
-        </div>
-       
-        <div class="card-body">
-          <form action="/signin" method="POST">
-            <div class="form-group">
-              <input type="text" name="username" placeholder="Username" class="form-control" autofocus>
-            </div>
-            <div class="form-group">
-              <input type="password" name="password" placeholder="Password" class="form-control">
-            </div>
-            <button class="btn btn-primary btn-block">
-              Ingresar
-            </button>
-          </form>
 
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<section class="tab-content">
+	<!-- Example single danger button -->
+<div class="row">
+	<div class="col-2"></div>	
+	<div class="col-2">
+		<div class="btn-group">
+			<button type="button" class="btn btn-Success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				LIBRERIA DE PELICULAS
+			</button>
+			
+			<div class="dropdown-menu">
+				
+				<a class="dropdown-item" href="/links/listar">Accion</a>
+				<a class="dropdown-item" href="/links/anime">Anime</a>
+				<a class="dropdown-item" href="#">Something else here</a>
+			</div>
+		</div>
+	</div>
+	<div class="col-8">
+		<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+		<ol class="carousel-indicators">
+			<li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+			<li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+			<li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+		</ol>
+		<div class="carousel-inner">
+			<div class="embed-responsive embed-responsive-16by9">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/fWbdJNVmvco?autoplay=1&mute=1&enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" type="video/mp4" allowfullscreen></iframe>
+			</div>
+				<h5>First slide label</h5>
+				<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+			</div>
+			</div>
+			<div class="carousel-item">
+			<img src="..." class="d-block w-100" alt="...">
+			<div class="carousel-caption d-none d-md-block">
+				<h5>Second slide label</h5>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			</div>
+			</div>
+			<div class="carousel-item">
+			<img src="..." class="d-block w-100" alt="...">
+			<div class="carousel-caption d-none d-md-block">
+				<h5>Third slide label</h5>
+				<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+			</div>
+			</div>
+		</div>
+		<a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+		</div>
+	</div>		
+
+</div>	
+		<section class="tab-content">
 			<div class="container">
 				<!-- Tab Content 1 -->
 				<div id="tab-1-content" class="tab-content-item show">
@@ -187,3 +230,5 @@
 			</div>
 
 		</footer>
+</body>
+</html>

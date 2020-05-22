@@ -6,10 +6,18 @@ const fs = require('fs');
 const path = require('path');
 
 router.get('/listar', async(req, res) => {
-    const pelicula = await pool.query('SELECT * FROM  peliculas');
-    res.render('links/list', { pelicula });
+    const pelicula = await pool.query('SELECT * FROM  peliculas where tipos="1"');
+    res.render('links/accion', { pelicula });
 
 });
+
+router.get('/anime', async(req, res) => {
+    const pelicula = await pool.query('SELECT * FROM  peliculas where tipos="2"');
+    res.render('links/anime', { pelicula });
+
+});
+
+
 
 
 module.exports = router;

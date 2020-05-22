@@ -1,17 +1,42 @@
 <center><h1>yo soy editar</h1></center>
 <br>
 {{#each estudianteid}}
-<form action="/estudiante/editar/{{id}}" method="post">        
+<form action="/peliculas/editar/{{id}}" method="post">        
                         <div class="form-group">
                             <input class="form-control" type="text" value="{{nombre}}" name="nombre"  id="">
                         </div>
                         <div class="form-group">
-                            <input class="form-control" type="number" value="{{edad}}" name="edad" id="">
+                            <input class="form-control" type="text" value="{{imagen}}" name="imagen" id="">
                         </div>
+
                         <div class="form-group">
-                            <input class="form-control" type="text" value="{{correo}}" name="correo"  id="">
+                            <input class="form-control" type="text" value="{{descripcion}}" name="descripcion" id="">
+                        </div>
+
+                        <div class="form-group">
+                            <input class="form-control" type="text" value="{{trailer}}" name="trailer"  id="">
+                        </div>
+
+                        <div class="form-group">
+                            <input class="form-control" type="number" value="{{tipos}}" name="tipos"  id="">
+                        </div>
+
+                        <div class="form-group">
+                            <input class="form-control" type="text" value="{{duracion}}" name="duracion"  id="">
                         </div>
                       
+                        <div class="form-group">
+                            <input class="form-control" type="text" value="{{pais}}" name="pais"  id="">
+                        </div>
+
+                        <div class="form-group">
+                            <input class="form-control" type="number" value="{{director}}" name="director"  id="">
+                        </div>
+
+                        <div class="form-group">
+                            <input class="form-control" type="number" value="{{actores}}" name="actores"  id="">
+                        </div>
+
                         <div class="form-gropu">
                             <button type="submit"  class="btn btn-success btn-block">enviar</button>
                         </div>

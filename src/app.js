@@ -51,6 +51,7 @@ app.use((req, res, next) => {
 
 // Routes
 app.use('/peliculas', require('./routes/peliculas'));
+app.use('/pelis', require('./routes/pelis'));
 app.use(require('./routes/index.routes'));
 app.use(require('./routes/auth.routes'));
 app.use(require('./routes/user.routes'));

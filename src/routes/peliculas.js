@@ -12,13 +12,17 @@ router.get('/agregar', async(req, res) => {
 });
 
 router.post('/agregar', async(req, res) => {
-    const { nombre, imagen, descripcion, fecha, tipos } = req.body;
+    const { nombre, imagen, descripcion, trailer, tipos, duracion, pais, director, actores } = req.body;
     const estu = {
         nombre,
         imagen,
         descripcion,
-        fecha,
-        tipos
+        trailer,
+        tipos,
+        duracion,
+        pais,
+        director,
+        actores
     };
     await pool.query('insert into peliculas set ?', [estu]);
     req.flash('mensaje', 'Peliculas guardado satisfactoriamente');
@@ -39,8 +43,7 @@ router.get('/editar/:id', async(req, res) => {
 });
 router.post('/editar/:id', async(req, res) => {
     const { id } = req.params;
-    const { nombre, edad, correo } = req.body;
-    const updatestudiante = { nombre, edad, correo };
+    const { nombre, imagen, descripcion, trailer, tipos } = req.body;
     await pool.query('UPDATE peliculas SET ? WHERE id = ?', [req.body, id]);
     res.redirect('/peliculas/agregar');
 });

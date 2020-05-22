@@ -4,7 +4,13 @@
 <br>
 <form action="/peliculas/agregar" method="post">
     <center><input type="text" name="nombre" id="" placeholder="nombre"></center>
+    <center><input type="text" name="imagen" id="" placeholder="imagen"></center>
     <center><input type="text" name="descripcion" id="" placeholder="descripcion"></center>
+    <center><input type="text" name="trailer" id="" placeholder="trailer"></center>
+    <center><input type="text" name="duracion" id="" placeholder="duracion"></center>
+    <center><input type="text" name="pais" id="" placeholder="pais"></center>
+    <center><input type="text" name="director" id="" placeholder="director"></center>
+     <center><input type="text" name="actores" id="" placeholder="actores"></center>
     <center><input type="number" name="tipos" id="" placeholder="tipos"></center>
     <center><button type="submit">Enviar</button></center>
 </form>
@@ -32,7 +38,12 @@
                             <th>Imagen</th>
                             <th>Descripcion</th>
                             <th>Fecha</th>
-                            <th>Tipo</th>
+                            <th>Trailer</th>
+                            <th>Duracion</th>
+                            <th>Pais</th>
+                            <th>director</th>
+                            <th>Actores</th>
+                            <th>Tipos</th>
                             <th>opciones</th>
                         </tr>
                     </div>
@@ -43,13 +54,19 @@
                         <div class="col-6">
                             <td>{{id}}</td>
                             <td>{{nombre}}</td>
-                            <td><img src="{{image}}"/></td>
+                            <td><img src="{{imagen}}"></td>
                             <td>{{descripcion}}</td>
                             <th>{{fecha}}</th>
+                            <th>{{trailer}}</th>
+                            <th>{{duracion}}</th>
+                            <td>{{pais}}</td>
+                            <th>{{director}}</th>
+                            <th>{{actores}}</th>
                             <th>{{tipos}}</th>
-                            <td><a href="delete/{{id}}" class="btn btn-danger">eliminar</a>
-                            
-                             <a href="editar/{{id}}" class="btn btn-success">editar</a></td>
+                            <td>
+                                <a href="editar/{{id}}" class="btn btn-success">editar</a>
+                                <a href="delete/{{id}}" class="btn btn-danger">eliminar</a>
+                            </td>
                         </div>
                         {{/each}}
                     </tr>

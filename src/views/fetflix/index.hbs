@@ -3,27 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/style.css">
     <title>Fetflix</title>
 </head>
 <body>
-    <header class="showcase">
-			<div class="showcase-top">
-				<img src="/imagen/image2.png" alt="" />
-				<a href="/signin" class="btn btn-lg btn-success">Login</a>
-        		<a href="/signup" class="btn btn-lg btn-info">Register</a>
-				
-			</div>
-			<div class="showcase-content">
-				<h1>See what's next</h1>
-				<p>Watch anywhere. Cancel Anytime</p>
-				
-				<a href="#" class="btn btn-xl"
-					>Watch Free For 30 Days <i class="fas fa-chevron-right btn-icon"></i
-				></a>
-			</div>
-		</header>
-		
+   
+		{{>navigation}}
 		<section class="tab-content">
 			<div class="container">
 				<!-- Tab Content 1 -->
@@ -36,7 +22,7 @@
 							</p>
 							<a href="#" class="btn btn-lg">Watch Free For 30 Days</a>
 						</div>
-						<img src="/imagen/image3.png" alt="" />
+						<img src="/img/image3.png" alt="" width="100%" />
 					</div>
 				</div>
 
